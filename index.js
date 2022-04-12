@@ -17,18 +17,36 @@ function destructivelyRemoveFirstCat(name){
     cats.shift()
 }
 
-// function appendCat(name){
-//     // myLength = cats.length()
-//     cats.splice(3,0,name)
-// }
+
 
 function prependCat(name){
-    newCats = cats.splice(0,0,name)
+    let newCats = [...cats]
+    newCats.unshift(name)
+    
+    return newCats
 }
+
+
 
 function removeFirstCat(){
-    newArray = cats.slice(1)
+    let newCat = [...cats]
+    newCat.shift()
+    return newCat
 }
 
+function appendCat(name){
+    let newCat = [...cats]
+    newCat.push(name)
+    console.log(newCat)
+    return newCat
 
+}
+appendCat("Broom")
+
+function removeLastCat(){
+    let newCat = [...cats]
+    newCat.pop()
+
+    return newCat
+}
 
